@@ -11,4 +11,9 @@ export default defineConfig({
             refresh: [...refreshPaths,],
         }),
     ],
+    resolve: {
+        alias: {
+            '@': '/resources/js',
+        },
+    },
 });

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card auth_card">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -52,16 +52,13 @@
                         </div>
 
                         <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                            <div class="col-md-8 offset-md-4 mb-3">
+                                <button type="submit" class="btn border-main text-main">
+                                    Enter <i class="fa-solid fa-door-open"></i>
                                 </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                            </div>
+                            <div class="justify-content-center align-items-center d-flex">
+                                <a href="{{ route('register') }}" type="button" class="btn text-main">No account? Let's create one! <i class="fa-solid fa-user-plus"></i></a>
                             </div>
                         </div>
                     </form>
